@@ -1,4 +1,4 @@
-# chef-opsworks-kibana cookbook
+# opsworks-kibana cookbook
 
 # Requirements
 
