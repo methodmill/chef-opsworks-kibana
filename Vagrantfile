@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "kibana-wrapper-berkshelf"
+  config.omnibus.chef_version = "11.4.0"
 
   # Every Vagrant virtual environment requires a box to build off of.
   #config.vm.box = "precise64"
@@ -77,7 +78,7 @@ Vagrant.configure("2") do |config|
     chef.run_list = [ 
       "recipe[apt::default]",
       "recipe[java::default]",
-      "recipe[elasticsearch::default]",
+      #"recipe[elasticsearch::default]",
       "recipe[opsworks-kibana::default]"
     ]
   end
