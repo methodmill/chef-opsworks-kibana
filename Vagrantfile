@@ -61,9 +61,9 @@ Vagrant.configure("2") do |config|
           webserver_listen: "0.0.0.0",
           webserver: "nginx",
           install_type: "git",
-          config_cookbook: "opsworks-kibana",
+          config_cookbook: "opsworks_kibana",
           nginx: {
-            template_cookbook: "opsworks-kibana"
+            template_cookbook: "opsworks_kibana"
           }
         },
         elasticsearch: {
@@ -79,7 +79,7 @@ Vagrant.configure("2") do |config|
       "recipe[apt::default]",
       "recipe[java::default]",
       #"recipe[elasticsearch::default]",
-      "recipe[opsworks-kibana::default]"
+      "recipe[opsworks_kibana::default]"
     ]
   end
 

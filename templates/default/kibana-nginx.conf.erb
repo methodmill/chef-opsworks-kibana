@@ -7,7 +7,7 @@ server {
   location / {
     root  <%= @kibana_dir %>;
     index  index.html  index.htm;
-    <% if node['opsworks-kibana']['web_auth_enabled'] %>
+    <% if node['opsworks_kibana']['web_auth_enabled'] %>
     auth_basic  "Restricted";
     auth_basic_user_file  /etc/nginx/htpasswd;
     <% end %>
